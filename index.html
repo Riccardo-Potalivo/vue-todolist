@@ -19,7 +19,7 @@
   <div id="app">
     <div class="container">
         <main class="mt-5">
-            <input type="text" v-model="taskDescription">
+            <input type="text" v-model="taskDescription" @keyup.enter="addTask">
             <button @click="addTask">Add Task</button>
             <ul class="list-group">
                 <li class="list-group-item d-flex justify-content-between" v-for="(task, id) in tasks" :key="task.id">
