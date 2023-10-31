@@ -34,7 +34,9 @@ createApp({
                     id: 5
                 },
             ],
-            
+
+            idIndex: 5,
+            taskDescription: ''
         }
         
     },
@@ -42,13 +44,16 @@ createApp({
     methods: {
         // nuova task
         addTask(){
+            this.idIndex++
             const newTask = {
-                text: 'aa',
+                text: this.taskDescription,
                 done: false,
-                id: 1
+                id: this.idIndex
             }
 
-            this.tasks.push(newTask)
+            this.tasks.push(newTask);
+            this.taskDescription = ''
+            console.log(newTask)
         },
         
         removeTask(i){
