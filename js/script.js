@@ -41,16 +41,15 @@ createApp({
     
     methods: {
         // nuova task
-        // addTask(){
-        //     const newTask = {
-        //         text: 'aa',
-        //         id: 1,
-        //         done: false
-        //     }
+        addTask(){
+            const newTask = {
+                text: 'aa',
+                done: false,
+                id: 1
+            }
 
-        //     this.tasks.push(newTask)
-        //     console.log(tasks)
-        // }
+            this.tasks.push(newTask)
+        },
         
         removeTask(i){
             this.tasks.splice(i,1)
