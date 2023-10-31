@@ -17,14 +17,17 @@
 <body>
 
   <div id="app">
-    <main>
-        <!-- <button @click="addTask">Add Task</button> -->
-        <ul>
-            <li v-for="(task) in tasks">
-                <span :class="{'done' : task.done}">{{task.text}}</span>
-            </li>
-        </ul>
-    </main>
+    <div class="container">
+        <main class="mt-5">
+            <!-- <button @click="addTask">Add Task</button> -->
+            <ul class="list-group">
+                <li class="list-group-item d-flex justify-content-between" v-for="(task, id) in tasks" :key="task.id">
+                    <span :class="{'done' : task.done}">{{task.text}}</span>
+                    <i class="fa-solid fa-trash" @click="removeTask(id)"></i>
+                </li>
+            </ul>
+        </main>
+    </div>
   </div>
 
   <!-- javascript -->

@@ -9,20 +9,30 @@ createApp({
             // array tasks
             tasks: [
                 {
-                    id: 1,
                     text: 'aaa',
-                    done: true
+                    done: true,
+                    id: 1
                 },
                 {
-                    id: 2,
                     text: 'bbb',
-                    done: false
+                    done: false,
+                    id: 2
                 },
                 {
-                    id: 3,
                     text: 'ccc',
-                    done: false
-                }
+                    done: false,
+                    id: 3
+                },
+                {
+                    text: 'ddd',
+                    done: false,
+                    id: 4
+                },
+                {
+                    text: 'eee',
+                    done: false,
+                    id: 5
+                },
             ],
             
         }
@@ -41,6 +51,10 @@ createApp({
         //     this.tasks.push(newTask)
         //     console.log(tasks)
         // }
+        
+        removeTask(i){
+            this.tasks.splice(i,1)
+        }
 
     },
 
