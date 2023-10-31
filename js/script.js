@@ -7,7 +7,23 @@ createApp({
     data(){
         return {
             // array tasks
-            tasks: [],
+            tasks: [
+                {
+                    id: 1,
+                    text: 'aaa',
+                    done: true
+                },
+                {
+                    id: 2,
+                    text: 'bbb',
+                    done: false
+                },
+                {
+                    id: 3,
+                    text: 'ccc',
+                    done: false
+                }
+            ],
             
         }
         
@@ -15,16 +31,16 @@ createApp({
     
     methods: {
         // nuova task
-        addTask(){
-            const newTask = {
-                text: 'aa',
-                id: 1,
-                done: false
-            }
+        // addTask(){
+        //     const newTask = {
+        //         text: 'aa',
+        //         id: 1,
+        //         done: false
+        //     }
 
-            this.tasks.push(newTask)
-            console.log(tasks)
-        }
+        //     this.tasks.push(newTask)
+        //     console.log(tasks)
+        // }
 
     },
 

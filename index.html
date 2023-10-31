@@ -18,9 +18,11 @@
 
   <div id="app">
     <main>
-        <button @click="addTask">Add Task</button>
+        <!-- <button @click="addTask">Add Task</button> -->
         <ul>
-            <li v-for="(task) in tasks">{{task.text}}</li>
+            <li v-for="(task) in tasks">
+                <span :class="{'done' : task.done}">{{task.text}}</span>
+            </li>
         </ul>
     </main>
   </div>
