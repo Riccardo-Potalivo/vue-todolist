@@ -58,6 +58,10 @@ createApp({
         
         removeTask(i){
             this.tasks.splice(i,1)
+        },
+
+        taskCheck(i){
+            this.tasks[i].done = !this.tasks[i].done
         }
 
     },
